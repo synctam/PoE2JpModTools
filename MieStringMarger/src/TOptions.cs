@@ -107,15 +107,15 @@ namespace MonoOptions
             msg.WriteLine($@"使い方：");
             msg.WriteLine($@"日本語化MODを作成する。");
             msg.WriteLine(
-                $@"  usage: {exeName} -i <original lang folder path> -o <japanized lang folder path>" +
-                $@" -s <Trans Sheet path> [-m] [-r]");
+                $@"  usage: {exeName} -c <Trans Sheet(conv) path> -s <Trans Sheet(system) path> -t <Trans Sheet(chatter) path> -d <system db path> -o <japanized lang folder path>" +
+                $@" [-r]");
             msg.WriteLine($@"OPTIONS:");
             this.optionSet.WriteOptionDescriptions(msg);
             msg.WriteLine($@"Example:");
-            msg.WriteLine($@"  翻訳シート(-s)とオリジナルの言語フォルダー(-i)から日本語の言語フォルダーに日本語化MOD(-o)を作成する。");
+            msg.WriteLine($@"  翻訳シート(-c,-s,-t)とSystemDB(-d)から日本語化MODをフォルダー(-o)に作成する。");
             msg.WriteLine(
-                $@"    {exeName} -i Localisation\EN -o Localisation\JP" +
-                $@" -s SuTransSheet.csv");
+                $@"    {exeName} -c PoE2Sheet(conv).csv -s PoE2Sheet(system).csv -t PoE2Sheet(chatter).csv -d PoE2SystemDB.sqlite -o jpmod" +
+                $@" -r");
             msg.WriteLine($@"終了コード:");
             msg.WriteLine($@" 0  正常終了");
             msg.WriteLine($@" 1  異常終了");

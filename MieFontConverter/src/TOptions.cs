@@ -101,8 +101,8 @@ namespace MonoOptions
             msg.WriteLine($@"OPTIONS:");
             this.optionSet.WriteOptionDescriptions(msg);
             msg.WriteLine($@"Example:");
-            msg.WriteLine($@"  変換元(-s)と変換先(-t)を読み込み、new_fontフォルダーに'Type 2'形式で座標情報と検証リストを出力する。");
-            msg.WriteLine($@"    {exeName} -s resources_00014.-2 -t sharedassets0_00001.114 -o new_font -f 2 -l");
+            msg.WriteLine($@"  変換元(-s)と変換先(-t)を読み込み、new_fontフォルダーに'PoE2'形式で座標情報と検証リストを出力する。");
+            msg.WriteLine($@"    {exeName} -s resources_00014.-2 -t sharedassets0_00001.114 -o new_font -f PoE2 -l");
             msg.WriteLine($@"終了コード:");
             msg.WriteLine($@" 0  正常終了");
             msg.WriteLine($@" 1  異常終了");
@@ -324,7 +324,7 @@ namespace MonoOptions
 
             public bool IsDetail { get; internal set; }
 
-            public string FormatTypeText { get; internal set; } = $@"座標ファイルの出力形式。{Environment.NewLine}例：Type 2 の時 -t 2";
+            public string FormatTypeText { get; internal set; } = $@"座標ファイルの出力形式。{Environment.NewLine}例：PoE2 の場合は -f PoE2";
 
             public string FormatType { get; internal set; }
 

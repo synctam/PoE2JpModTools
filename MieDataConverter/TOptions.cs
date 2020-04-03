@@ -103,7 +103,7 @@ namespace MonoOptions
             this.optionSet.WriteOptionDescriptions(msg);
             msg.WriteLine($@"Example:");
             msg.WriteLine($@"  SystemDBにデータを取り込む。");
-            msg.WriteLine($@"    {exeName} -l data\localized\en -d data\design -s SystemDB.db3");
+            msg.WriteLine($@"    {exeName} -l data\localized\en -d data\design -s PoE2SystemDB.sqlite");
             msg.WriteLine($@"終了コード:");
             msg.WriteLine($@" 0  正常終了");
             msg.WriteLine($@" 1  異常終了");
