@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{94424709-A1F6-4694-9980-E87C7D400BA9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MieTranslationLib</RootNamespace>
+    <AssemblyName>MieTranslationLib</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\Common\Default.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\Common\Default.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Crc32.NET, Version=1.0.0.0, Culture=neutral, PublicKeyToken=dc0b95cf99bf4e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\Crc32.NET.1.2.0\lib\net20\Crc32.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="CsvHelper, Version=7.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\packages\CsvHelper.7.1.1\lib\net45\CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Hashids.net, Version=1.2.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hashids.net.1.2.2\lib\net45\Hashids.net.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.5.6\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Threading.ThreadPool, Version=4.0.11.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.ThreadPool.4.3.0\lib\net46\System.Threading.ThreadPool.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\MieCommon\JapaneseStringUtils.cs">
+      <Link>link\JapaneseStringUtils.cs</Link>
+    </Compile>
+    <Compile Include="Data\CharacterMap\MieCharacterAttributeEntry.cs" />
+    <Compile Include="Data\CharacterMap\MieCharacterAttributeFile.cs" />
+    <Compile Include="Data\CharacterMap\MieCharacterMapEntry.cs" />
+    <Compile Include="Data\CharacterMap\MieCharacterMapFile.cs" />
+    <Compile Include="Data\CharacterMap\MieCharacterSpecial.cs" />
+    <Compile Include="Data\CharacterMap\MieRaceAttributeEntry.cs" />
+    <Compile Include="Data\CharacterMap\MieSpeakerAttributeEntry.cs" />
+    <Compile Include="Data\Chatter\MieChatterLink.cs" />
+    <Compile Include="Data\Chatter\MieChatterNodeEntry.cs" />
+    <Compile Include="Data\Chatter\MieChatterNodeFile.cs" />
+    <Compile Include="Data\Chatter\MieChatterNodeInfo.cs" />
+    <Compile Include="Data\Conversations\MieConversationFlatNodeFile.cs" />
+    <Compile Include="Data\Conversations\MieConversationLink.cs" />
+    <Compile Include="Data\Conversations\MieConversationNodeEntry.cs" />
+    <Compile Include="Data\Conversations\MieConversationNodeFile.cs" />
+    <Compile Include="Data\Conversations\MieConversationNodeInfo.cs" />
+    <Compile Include="Data\FileList\MieFileEntry.cs" />
+    <Compile Include="Data\FileList\MieFileList.cs" />
+    <Compile Include="Data\LanguageHistory\MieLanguageHistoryFile.cs" />
+    <Compile Include="Data\Language\IMieLanguageFileAttribute.cs" />
+    <Compile Include="Data\Language\MieLanguageEntry.cs" />
+    <Compile Include="Data\Language\MieLanguageFile.cs" />
+    <Compile Include="Data\Language\MieLanguageFileAttribute.cs" />
+    <Compile Include="Data\Language\MieLanguageFileAttributeInfo.cs" />
+    <Compile Include="Data\LanguageHistory\MieLanguageHistoryArchiber.cs" />
+    <Compile Include="Data\LanguageHistory\MieLanguageHistoryEntry.cs" />
+    <Compile Include="Data\LanguageHistory\MieLanguageHistoryInfo.cs" />
+    <Compile Include="Data\Language\MieLanguageInfo.cs" />
+    <Compile Include="Data\Quests\MieQuestsLink.cs" />
+    <Compile Include="Data\Quests\MieQuestsNodeEntry.cs" />
+    <Compile Include="Data\Quests\MieQuestsNodeFile.cs" />
+    <Compile Include="Data\Quests\MieQuestsNodeInfo.cs" />
+    <Compile Include="Exceptions\MieExceptions.cs" />
+    <Compile Include="Facade\MieConversationApp.cs" />
+    <Compile Include="Facade\MieGameApp.cs" />
+    <Compile Include="Facade\MieQuestsApp.cs" />
+    <Compile Include="MieUtils\MieHashTools.cs" />
+    <Compile Include="MieUtils\MieStringUtils.cs" />
+    <Compile Include="Product\MieProduct.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransSheet\MieTransSheetDao.cs" />
+    <Compile Include="TransSheet\MieTransSheetEntry.cs" />
+    <Compile Include="TransSheet\MieTransSheetFile.cs" />
+    <Compile Include="TransSheet\MieTransSheetInfo.cs" />
+    <Compile Include="TransSheet\MieTransSheetOldDao.cs" />
+    <Compile Include="TransSheet\MieTransSheetOldEntry.cs" />
+    <Compile Include="TransSheet\MieTransSheetOldFile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.2\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
+    <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.2\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\TranslatedLanguage\" />
+    <Folder Include="Project\" />
+  </ItemGroup>
+  <Import Project="..\MieCommon\MieCommon.projitems" Label="Shared" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
