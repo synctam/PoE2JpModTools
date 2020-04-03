@@ -1,0 +1,4 @@
+このツールでは Pillars of Eternity のＤＬＬを使用しています。
+Pillars of Eternity 2 の PillarsOfEternityII_Data\Managed フォルダーにある二つのＤＬＬをここにコピーし「参照設定」および「ローカルにコピー」を true に設定してください。
+・OEICommon.dll
+・OEIFormats.dll 

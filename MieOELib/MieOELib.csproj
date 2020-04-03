@@ -40,12 +40,13 @@
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.4.5.6\lib\net45\NLog.dll</HintPath>
     </Reference>
-    <Reference Include="OEICommon">
-      <HintPath>DLL\PoE2\OEICommon.dll</HintPath>
+    <Reference Include="OEICommon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>refs\OEICommon.dll</HintPath>
     </Reference>
     <Reference Include="OEIFormats, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLL\PoE2\OEIFormats.dll</HintPath>
+      <HintPath>refs\OEIFormats.dll</HintPath>
     </Reference>
     <Reference Include="OpenTl.BouncyCastle, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
       <HintPath>..\packages\OpenTl.BouncyCastle.1.8.3\lib\net46\OpenTl.BouncyCastle.dll</HintPath>

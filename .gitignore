@@ -266,4 +266,4 @@ __pycache__/
 /MieCeoverter/NLog.xsd
 /docs/*.pdf
 /MieFontConverter/data
-
+/MieOELib/refs/*.dll
